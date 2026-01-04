@@ -1,0 +1,131 @@
+{
+  "mcp_name": "playwright",
+  "auto_generated": true,
+  "algorithm_version": "v2.1",
+  "rules": {
+    "default_minifier": "first_sentence",
+    "remove_params_description": true
+  },
+  "groups": [
+    {
+      "name": "control",
+      "description": "control operations",
+      "mapping": {
+        "resize": "browser_resize",
+        "handle_dialog": "browser_handle_dialog",
+        "evaluate": "browser_evaluate",
+        "run_code": "browser_run_code",
+        "wait_for": "browser_wait_for"
+      },
+      "common_schema": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "type": "string",
+            "enum": [
+              "resize",
+              "handle_dialog",
+              "evaluate",
+              "run_code",
+              "wait_for"
+            ]
+          }
+        },
+        "required": [
+          "action"
+        ]
+      }
+    },
+    {
+      "name": "capture",
+      "description": "capture operations",
+      "mapping": {
+        "console_messages": "browser_console_messages",
+        "network_requests": "browser_network_requests",
+        "take_screenshot": "browser_take_screenshot",
+        "snapshot": "browser_snapshot"
+      },
+      "common_schema": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "type": "string",
+            "enum": [
+              "console_messages",
+              "network_requests",
+              "take_screenshot",
+              "snapshot"
+            ]
+          }
+        },
+        "required": [
+          "action"
+        ]
+      }
+    },
+    {
+      "name": "interaction",
+      "description": "interaction operations",
+      "mapping": {
+        "file_upload": "browser_file_upload",
+        "fill_form": "browser_fill_form",
+        "press_key": "browser_press_key",
+        "type": "browser_type",
+        "click": "browser_click",
+        "drag": "browser_drag",
+        "hover": "browser_hover",
+        "select_option": "browser_select_option"
+      },
+      "common_schema": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "type": "string",
+            "enum": [
+              "file_upload",
+              "fill_form",
+              "press_key",
+              "type",
+              "click",
+              "drag",
+              "hover",
+              "select_option"
+            ]
+          }
+        },
+        "required": [
+          "action"
+        ]
+      }
+    },
+    {
+      "name": "navigation",
+      "description": "navigation operations",
+      "mapping": {
+        "navigate": "browser_navigate",
+        "navigate_back": "browser_navigate_back",
+        "tabs": "browser_tabs"
+      },
+      "common_schema": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "type": "string",
+            "enum": [
+              "navigate",
+              "navigate_back",
+              "tabs"
+            ]
+          }
+        },
+        "required": [
+          "action"
+        ]
+      }
+    }
+  ],
+  "passthrough": [
+    "browser_close",
+    "browser_install"
+  ]
+}
