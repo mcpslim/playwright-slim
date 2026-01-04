@@ -29,6 +29,39 @@
               "run_code",
               "wait_for"
             ]
+          },
+          "width": {
+            "type": "number"
+          },
+          "height": {
+            "type": "number"
+          },
+          "accept": {
+            "type": "boolean"
+          },
+          "promptText": {
+            "type": "string"
+          },
+          "function": {
+            "type": "string"
+          },
+          "element": {
+            "type": "string"
+          },
+          "ref": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string"
+          },
+          "time": {
+            "type": "number"
+          },
+          "text": {
+            "type": "string"
+          },
+          "textGone": {
+            "type": "string"
           }
         },
         "required": [
@@ -56,6 +89,40 @@
               "take_screenshot",
               "snapshot"
             ]
+          },
+          "level": {
+            "type": "string",
+            "enum": [
+              "error",
+              "warning",
+              "info",
+              "debug"
+            ],
+            "default": "info"
+          },
+          "includeStatic": {
+            "type": "boolean",
+            "default": false
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "png",
+              "jpeg"
+            ],
+            "default": "png"
+          },
+          "filename": {
+            "type": "string"
+          },
+          "element": {
+            "type": "string"
+          },
+          "ref": {
+            "type": "string"
+          },
+          "fullPage": {
+            "type": "boolean"
           }
         },
         "required": [
@@ -91,6 +158,85 @@
               "hover",
               "select_option"
             ]
+          },
+          "paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "fields": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "ref": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "key": {
+            "type": "string"
+          },
+          "element": {
+            "type": "string"
+          },
+          "ref": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "submit": {
+            "type": "boolean"
+          },
+          "slowly": {
+            "type": "boolean"
+          },
+          "doubleClick": {
+            "type": "boolean"
+          },
+          "button": {
+            "type": "string",
+            "enum": [
+              "left",
+              "right",
+              "middle"
+            ]
+          },
+          "modifiers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "startElement": {
+            "type": "string"
+          },
+          "startRef": {
+            "type": "string"
+          },
+          "endElement": {
+            "type": "string"
+          },
+          "endRef": {
+            "type": "string"
+          },
+          "values": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         },
         "required": [
@@ -112,10 +258,17 @@
           "action": {
             "type": "string",
             "enum": [
-              "navigate",
-              "navigate_back",
-              "tabs"
+              "list",
+              "new",
+              "close",
+              "select"
             ]
+          },
+          "url": {
+            "type": "string"
+          },
+          "index": {
+            "type": "number"
           }
         },
         "required": [
