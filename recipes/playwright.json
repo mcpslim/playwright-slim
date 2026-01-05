@@ -9,7 +9,7 @@
   "groups": [
     {
       "name": "control",
-      "description": "control operations",
+      "description": "Control browser environments by resizing windows, executing code, managing dialogs, and waiting for page changes.",
       "mapping": {
         "resize": "browser_resize",
         "handle_dialog": "browser_handle_dialog",
@@ -76,7 +76,7 @@
     },
     {
       "name": "capture",
-      "description": "capture operations",
+      "description": "Capture console output, network traffic, and visual/accessibility snapshots to detail webpage state.",
       "mapping": {
         "console_messages": "browser_console_messages",
         "network_requests": "browser_network_requests",
@@ -137,7 +137,7 @@
     },
     {
       "name": "interaction",
-      "description": "interaction operations",
+      "description": "Execute user interface interactions like file uploads, form submissions, and precise webpage element controls.",
       "mapping": {
         "file_upload": "browser_file_upload",
         "fill_form": "browser_fill_form",
@@ -261,7 +261,7 @@
     },
     {
       "name": "navigation",
-      "description": "navigation operations",
+      "description": "Control browser actions like visiting webpages, managing tabs, and revisiting prior content.",
       "mapping": {
         "navigate": "browser_navigate",
         "navigate_back": "browser_navigate_back",
@@ -297,5 +297,7 @@
   "passthrough": [
     "browser_close",
     "browser_install"
-  ]
+  ],
+  "ai_enhanced": true,
+  "enhanced_at": "2026-01-05T07:31:17.727Z"
 }
