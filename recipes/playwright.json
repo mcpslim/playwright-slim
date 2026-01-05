@@ -65,7 +65,12 @@
           }
         },
         "required": [
-          "action"
+          "action",
+          "width",
+          "height",
+          "accept",
+          "function",
+          "code"
         ]
       }
     },
@@ -240,7 +245,17 @@
           }
         },
         "required": [
-          "action"
+          "action",
+          "fields",
+          "key",
+          "element",
+          "ref",
+          "text",
+          "startElement",
+          "startRef",
+          "endElement",
+          "endRef",
+          "values"
         ]
       }
     },
@@ -272,6 +287,8 @@
           }
         },
         "required": [
+          "action",
+          "url",
           "action"
         ]
       }
