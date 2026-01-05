@@ -1,6 +1,6 @@
 # playwright-slim
 
-> **Playwright MCP server optimized for AI assistants** — Reduce context window tokens by 76.3% while keeping full functionality. Compatible with Claude, ChatGPT, Gemini, Cursor, and all MCP clients.
+> **Playwright MCP server optimized for AI assistants** — Reduce context window tokens by 74.3% while keeping full functionality. Compatible with Claude, ChatGPT, Gemini, Cursor, and all MCP clients.
 
 [![npm version](https://img.shields.io/npm/v/playwright-slim.svg)](https://www.npmjs.com/package/playwright-slim)
 [![Test Status](https://img.shields.io/badge/tests-passing-brightgreen)](https://github.com/mcpslim/mcpslim)
@@ -18,7 +18,7 @@ The original `@playwright/mcp` loads **22 tools** consuming approximately **~15,
 
 ### The Solution
 
-`playwright-slim` intelligently **groups 22 tools into 6 semantic operations**, reducing token usage by **76.3%** — with **zero functionality loss**.
+`playwright-slim` intelligently **groups 22 tools into 6 semantic operations**, reducing token usage by **74.3%** — with **zero functionality loss**.
 
 Your AI assistant sees fewer, smarter tools. Every original capability remains available.
 
@@ -27,8 +27,8 @@ Your AI assistant sees fewer, smarter tools. Every original capability remains a
 | Metric | Original | Slim | Reduction |
 |--------|----------|------|-----------|
 | Tools | 22 | 6 | **-73%** |
-| Schema Tokens | 2,922 | 237 | **91.9%** |
-| Claude Code (est.) | ~15,462 | ~3,657 | **~76.3%** |
+| Schema Tokens | 2,922 | 556 | **81.0%** |
+| Claude Code (est.) | ~15,462 | ~3,976 | **~74.3%** |
 
 > **Benchmark Info**
 > - Original: `@playwright/mcp@0.0.54`
@@ -110,7 +110,7 @@ MCPSlim acts as a **transparent bridge** between AI models and the original MCP 
 │       │                │                      │                 │
 │   Sees 6 grouped      Translates to        Executes actual   │
 │   tools only         original call       tool & returns    │
-│   (~3,657 tokens)                                              │
+│   (~3,976 tokens)                                              │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -122,7 +122,7 @@ MCPSlim acts as a **transparent bridge** between AI models and the original MCP 
 4. **Original MCP executes** — Real server processes the request
 5. **Response returned** — Result passes back unchanged
 
-**Zero functionality loss. 76.3% token savings.**
+**Zero functionality loss. 74.3% token savings.**
 
 ## Available Tool Groups
 
