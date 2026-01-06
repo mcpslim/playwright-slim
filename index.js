@@ -17,7 +17,7 @@ const os = require('os');
 const fs = require('fs');
 const readline = require('readline');
 
-const MCP_NAME = 'playwright';
+const MCP_NAME = 'playwright-slim';
 const PACKAGE_NAME = 'playwright-slim';
 
 // 환경변수 요구사항 (빌드 시 주입)
