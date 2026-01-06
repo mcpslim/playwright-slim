@@ -1,6 +1,6 @@
 {
   "name": "playwright-slim",
-  "version": "0.0.54-slim.1.1",
+  "version": "0.0.54-slim.1.2",
   "description": "playwright MCP (73% less tokens). Quick setup: npx playwright-slim --setup",
   "bin": {
     "playwright-slim": "./index.js"
