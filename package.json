@@ -1,6 +1,6 @@
 {
   "name": "playwright-slim",
-  "version": "0.0.54",
+  "version": "0.0.54-slim.1",
   "description": "Slimmed playwright MCP - 73% token reduction for AI models",
   "bin": {
     "playwright-slim": "./index.js"
