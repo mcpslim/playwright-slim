@@ -56,13 +56,13 @@ Done! Restart your app to use playwright.
 
 ```bash
 # Claude Code (creates .mcp.json in project root)
-claude mcp add playwright -s project -- npx -y playwright-slim
+claude mcp add playwright -s project -- npx -y playwright-slim@latest
 
 # Windows: use cmd /c wrapper
-claude mcp add playwright -s project -- cmd /c npx -y playwright-slim
+claude mcp add playwright -s project -- cmd /c npx -y playwright-slim@latest
 
 # VS Code (Copilot, Cline, Roo Code)
-code --add-mcp '{"name":"playwright","command":"npx","args":["-y","playwright-slim"]}'
+code --add-mcp '{"name":"playwright","command":"npx","args":["-y","playwright-slim@latest"]}'
 ```
 
 ## Manual Setup
@@ -84,7 +84,7 @@ Add to your `claude_desktop_config.json`:
   "mcpServers": {
     "playwright": {
       "command": "npx",
-      "args": ["-y", "playwright-slim"]
+      "args": ["-y", "playwright-slim@latest"]
     }
   }
 }
@@ -99,7 +99,7 @@ Add to `.cursor/mcp.json` (global) or `<project>/.cursor/mcp.json` (project):
   "mcpServers": {
     "playwright": {
       "command": "npx",
-      "args": ["-y", "playwright-slim"]
+      "args": ["-y", "playwright-slim@latest"]
     }
   }
 }
