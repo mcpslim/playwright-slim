@@ -4,12 +4,12 @@
   "algorithm_version": "v2.1",
   "rules": {
     "default_minifier": "first_sentence",
-    "remove_params_description": true
+    "remove_params_description": false
   },
   "groups": [
     {
       "name": "control",
-      "description": "Control browser environments by resizing windows, executing code, managing dialogs, and waiting for page changes.",
+      "description": "control operations",
       "mapping": {
         "resize": "browser_resize",
         "handle_dialog": "browser_handle_dialog",
@@ -31,10 +31,12 @@
             ]
           },
           "width": {
-            "type": "number"
+            "type": "number",
+            "description": "Width of the browser window"
           },
           "height": {
-            "type": "number"
+            "type": "number",
+            "description": "Height of the browser window"
           },
           "accept": {
             "type": "boolean"
@@ -76,7 +78,7 @@
     },
     {
       "name": "capture",
-      "description": "Capture console output, network traffic, and visual/accessibility snapshots to detail webpage state.",
+      "description": "capture operations",
       "mapping": {
         "console_messages": "browser_console_messages",
         "network_requests": "browser_network_requests",
@@ -103,7 +105,8 @@
               "info",
               "debug"
             ],
-            "default": "info"
+            "default": "info",
+            "description": "Level of the console messages to return."
           },
           "includeStatic": {
             "type": "boolean",
@@ -137,7 +140,7 @@
     },
     {
       "name": "interaction",
-      "description": "Execute user interface interactions like file uploads, form submissions, and precise webpage element controls.",
+      "description": "interaction operations",
       "mapping": {
         "file_upload": "browser_file_upload",
         "fill_form": "browser_fill_form",
@@ -168,7 +171,8 @@
             "type": "array",
             "items": {
               "type": "string"
-            }
+            },
+            "description": "absolute paths to the files to upload."
           },
           "fields": {
             "type": "array",
@@ -261,7 +265,7 @@
     },
     {
       "name": "navigation",
-      "description": "Control browser actions like visiting webpages, managing tabs, and revisiting prior pages.",
+      "description": "navigation operations",
       "mapping": {
         "navigate": "browser_navigate",
         "navigate_back": "browser_navigate_back",
@@ -280,7 +284,8 @@
             ]
           },
           "url": {
-            "type": "string"
+            "type": "string",
+            "description": "URL to navigate to"
           },
           "index": {
             "type": "number"
@@ -297,7 +302,5 @@
   "passthrough": [
     "browser_close",
     "browser_install"
-  ],
-  "ai_enhanced": true,
-  "enhanced_at": "2026-01-07T00:20:25.318Z"
+  ]
 }
